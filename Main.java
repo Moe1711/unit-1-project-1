@@ -6,18 +6,29 @@ class Main {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 //main question
-    System.out.print("Which would you like to choose.\n A) Adittion table\n B) Multiplication Table\n C) Logic table for boolean logic’s AND gate\n D) Logic table for boolean logic’s OR gate\n E) Pascal's triangle\n");
+    System.out.print("Which would you like to choose.\n A) Addition table\n B) Multiplication Table\n C) Logic table for boolean logic’s AND gate\n D) Logic table for boolean logic’s OR gate\n E) Pascal's triangle\n");
 
     String userChoice = input.nextLine();
-    
-//addition table    
-    for(int i = 0; i<=10; i++) {
-      if (userChoice.equalsIgnoreCase("a")) {
-        System.out.print( i + " \t");
-          for(int j = 1; j<10; j++){
-           System.out.print( i + "\t");
-          }
+   
+//addition table  
+    if (userChoice.equalsIgnoreCase("a")) { 
+      for(int i = 0; i<=10; i++) {
+        for(int j = 0; j<11; j++){
+          System.out.print(i*10 + j + "\t");
+        }
         System.out.print("\n");//spacing
+      }
+    }
+//Multiplication table
+    else if (userChoice.equalsIgnoreCase("b")) {
+      int [][] twoArray = new int [11][11]; 
+      for(int i = 1; i<11; i++){
+        for(int o = 1; o<11; o++)
+        {
+          twoArray[i][o] = i * o;// math part
+          System.out.print(twoArray[i][o] + "\t");
+        }
+        System.out.println();// so it's a table not a long line
       }
     }
    
