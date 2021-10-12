@@ -31,6 +31,19 @@ class Main {
         System.out.println();// so it's a table not a long line
       }
     }
+// logic and gate
+    boolean question1, question2, ans;
+    else if (userChoice.equalsIgnoreCase("c")){
+      System.out.println("Condition 1\tCondition2\tAND");
+      for(int i =0; i<=1; i++){
+        for(int o=0; i<=1; i++){
+          question1 (i== 1);
+          question2 (o== 1);
+          ans = (question1 == true || question2 == true);
+          System.out.print(question1+ "\t" + question2+ "\t" + ans);
+        }
+      }
+    }    
    
 
   }
