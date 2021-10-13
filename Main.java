@@ -34,7 +34,7 @@ class Main {
 // logic or gate
     boolean question1, question2, ans;
     if (userChoice.equalsIgnoreCase("d")){
-      System.out.println("Condition 1\tCondition2\tAND");
+      System.out.println("Condition 1\tCondition2\tOR");
       for(int i =0; i<=1; i++){
         for(int o=0; o<=1; o++){
           question1 = (i== 1);
@@ -43,8 +43,20 @@ class Main {
           System.out.println(question1+ "\t\t" + question2+ "\t\t" + ans);
         }
       }
+    }   
+    //AND gate 
+    boolean quest1, quest2, answer;
+    if (userChoice.equalsIgnoreCase("c")){
+      System.out.println("Condition 1\tCondition2\tAND");
+      for(int i =0; i<=1; i++){
+        for(int o=0; o<=1; o++){
+          quest1 = (i== 1);
+          quest2 = (o== 1);
+          answer = (quest1 == true && quest2 == true);
+          System.out.println(quest1+ "\t\t" + quest2+ "\t\t" + answer);
+        }
+      }
     }    
-   
 
   }
 }
