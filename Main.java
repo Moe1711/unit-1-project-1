@@ -81,16 +81,22 @@ class Main {
     //remainder table
     
     if (userChoice.equalsIgnoreCase("f")) {
-      for(int i=1; i<11; i++){
-       System.out.print(i + "\t"); 
-      }
-      System.out.println();
-      for(int i = 1; i<11; i++){
-        System.out.print(i);
-        for(int o = 1; o<11; o++){
-          System.out.print( i % o + "\t");
-          
-        }
+      int [][] twoArray = new int [11][11]; 
+      for(int m =0; m<11; m++){
+        for(int i = 0; i<11; i++){
+          if(m==0){
+            twoArray [0][i] = i;
+          }
+          else if (i==0){
+            twoArray[m][0] = m; 
+          }
+          else {
+            twoArray [m][i] = twoArray[0][i]%twoArray[m][0];
+          }
+          System.out.print(twoArray[m][i] + "\t");
+        
+
+         }
         System.out.println();// so it's a table not a long line
       }
     }  
