@@ -99,7 +99,32 @@ class Main {
          }
         System.out.println();// so it's a table not a long line
       }
-    }  
+    } 
+
+    //pascal's triangle
+
+    if (userChoice.equalsIgnoreCase("e")){
+      System.out.print("Enter the number of rows you would like. \n");
+      int numRow = Integer.parseInt(input.nextLine());
+      int coefficiant = 1;
+
+      for(int i =0; i <numRow; i++) {
+        for (int p = 1; p<numRow - i; ++p) {
+         System.out.print("  ");
+        }
+        for(int a = 0; a <=i; a++) {
+          if ( a==0 || i==0 ) {
+            coefficiant = 1;
+          }
+          else {
+            coefficiant = coefficiant * (i - a + 1)/a;
+          }
+          System.out.printf("%4d", coefficiant );
+        }
+        System.out.println();
+      }
+
+    }
 
   }
 }
